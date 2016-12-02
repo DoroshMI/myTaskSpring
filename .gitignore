@@ -14,3 +14,5 @@ hs_err_pid*
 
 HelloWorldDecoupledWithFactory/target/
 Chapter2/target/
+Chapter3/constructor-injection/target
+Chapter3/setter-annotation-injection/target
