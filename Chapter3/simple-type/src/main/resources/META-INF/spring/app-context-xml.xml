@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="injectPropsSimpleValue" class="org.dorosh.spring.ch3.xml.SimpleValue"
+    	p:name="Marian Dorosh"
+    	p:age="31"
+    	p:height="1.80"
+    	p:programmer="true"
+    	p:ageInSeconds="10000000000"/>
+    	
+   
+        
+</beans>
