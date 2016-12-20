@@ -27,6 +27,7 @@ public class SimpleBeanWithMethod implements SimpleBeanInterface {
 		this.file=new File(filePath);
 		this.file.createNewFile();
 		System.out.println("File exists: "+file.exists());
+		System.out.println("FilePath: "+filePath);
 	}
 
 	@Override

@@ -11,17 +11,23 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class DestroyBean {
     public static void main(String[] args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        //ctx.load("classpath:META-INF/spring/app-context-method.xml");
-        //ctx.load("classpath:META-INF/spring/app-context-interface.xml");
-        ctx.load("classpath:META-INF/spring/app-context-annotation.xml");
+        GenericXmlApplicationContext ctxAnnotation = new GenericXmlApplicationContext();
+        ctx.load("classpath:META-INF/spring/app-context-method.xml");
+        ctx.registerShutdownHook();
         ctx.refresh();
-        //SimpleBeanInterface bean = ctx.getBean("destractiveBean", SimpleBeanWithMethod.class);
+        //ctx.load("classpath:META-INF/spring/app-context-interface.xml");
+        
+        SimpleBeanInterface bean = ctx.getBean("destractiveBean", SimpleBeanWithMethod.class);
         //SimpleBeanInterface bean = ctx.getBean("destractiveBean", SimpleBeanWithInterface.class);
-        SimpleBeanInterface bean = ctx.getBean("destractiveBean", SimpleBeanWithAnnotation.class);
+        //SimpleBeanInterface bean = ctx.getBean("destractiveBean", SimpleBeanWithAnnotation.class);
 
         System.out.println("Calling destroy()");
-        ctx.destroy();
+        //ctx.destroy();
         System.out.println("Called destroy()");
+
+        //System.out.println("Calling destroy()");
+        //ctxAnnotation.destroy();
+        //System.out.println("Called destroy()");
         
     }
 }
